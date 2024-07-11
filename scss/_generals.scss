@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ecf2f7;
+    font-family: "Public Sans",sans-serif;
+    font-family:  "DM Serif Display", sans-serif;
+    background-image: url(../images/Bitmap.png);
+    background-repeat: no-repeat;
+    background-size: 640px 608px;
+    background-position: top right;
+}
+@media (max-width:900px){
+    body {
+        background-image: url(../images/tablet-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+    }
+}
+@media (max-width:718px){
+    body {
+        background-image: url(../images/mobile-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+    }
+}
+h1,h2,h3,h4{
+    font-family: "DM Serif Display",sans-serif;
+}

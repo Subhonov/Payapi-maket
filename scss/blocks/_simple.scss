@@ -1,0 +1,52 @@
+.simple-section {
+    padding:150px 0 146px;
+    background-image: url(../../images/easiy-bg.png);
+    background-size:390px 780px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.simple__content--wrapper {
+    @include display($items:center,$space:space-between,$gap:0px);
+}
+.simple__wrapp {
+    max-width: 445px;
+}
+.simple__wrapp--titl {
+    @include textStyle($FW:400,$FS:48px,$LH:56px,$CASE:inherit,$MB:24px,$CLR:$--bg-home-clr);
+}
+.simple__wrapp--text {
+    @include textStyle($FW:400,$FS:15px,$LH:28px,$CASE:inherit,$MB:0px,$CLR:#6C8294);
+}
+@media (max-width:920px){
+    .simple-section {
+        padding:100px 0;
+        background-image: none;
+    }
+    .simple__content--wrapper {
+        flex-direction: column-reverse;
+        @include display($items:center,$space:flex-start,$gap:48px);
+    }
+    .simple__wrapp {
+        max-width: 573px;
+        text-align: center;
+    }
+    .simple__img {
+        width: 363px;
+        height: 320px;
+    }
+}
+@media (max-width:472px){
+    .simple-section {
+        padding:80px 0;
+    }
+    .simple__wrapp {
+        max-width:100%;
+    }
+    .simple__img {
+        width: 328px;
+        height: 290px;
+    }
+    .simple__wrapp--titl {
+        @include textStyle($FW:400,$FS:36px,$LH:36px,$CASE:inherit,$MB:24px,$CLR:$--bg-home-clr);
+    }
+}

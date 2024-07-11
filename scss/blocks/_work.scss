@@ -1,0 +1,90 @@
+.work-section {
+    padding-bottom: 100px;
+    background-color: #1b262f;
+    background-image: url(../images/work-bg.png);
+    background-size: 622px 421px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+.work__content--wrapper {
+    padding-top: 100px;
+    @include display($items: center, $space:space-between, $gap:0px);
+}
+.work__content {
+    width: 445px;
+}
+.work__content--title {
+    @include textStyle($FW: 400,$FS: 48px,$LH: 56px,$CASE: capitalize,$MB: 24px,$CLR: #fbfcfe);
+}
+.work__content--text {
+    @include textStyle(
+        $FW: 400,
+        $FS: 15px,
+        $LH: 28px,
+        $CASE: capitalize,
+        $MB: 32px,
+        $CLR: #afb3b7
+    );
+    font-family: Public Sans;
+}
+.work__content--btn {
+    width: 129px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #fbfcfe;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+    @include textStyle(
+        $FW: 700,
+        $FS: 15px,
+        $LH: 17.63px,
+        $CASE: capitalize,
+        $MB: 0px,$CLR: #fbfcfe);
+        &:hover{
+            background-color: white;
+            color: #1B262F;
+        }
+}
+@media (max-width:975px){
+    .work-section {
+        background-image: url(../../images/work-tablet\ bg.png);
+        background-size: 712px 232px;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .work__content--wrapper {
+        @include display($items: center, $space:flex-start, $gap:64px);
+        flex-direction: column-reverse;
+    }
+    .work__content {
+       max-width:457px;
+       text-align: center;
+    }
+}
+@media (max-width:675px){
+    .work-section {
+        background-image: url(../../images/mobile-bg.svg);
+        background-size:100% 157px;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .work__content--wrapper {
+        @include display($items: center, $space:flex-start, $gap:56px);
+    }
+    .work__content {
+       max-width:327px;
+       text-align: center;
+    }
+    .work__img{
+        width: 280px;
+        height: 154px;
+    }
+    .work__content--title {
+        @include textStyle($FW: 400,$FS: 32px,$LH:36px,$CASE:inherit,$MB: 16px,$CLR: #fbfcfe);
+    }
+    .work__content--btn {
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,107 @@
+.site-header {
+    padding: 40px 0 74px;
+}
+.header {
+    @include display($items:center,$space:space-between,$gap:0px);
+}
+.pay__content--wrapper {
+    @include display($items:center,$space:center,$gap:65px);
+}
+.pay__content--logo {
+    display: inline-block;
+}
+.pay__content--list {
+    @include display($items:center,$space:flex-start,$gap:40px);
+}
+.pay__content--home-page {
+    @include textStyle($FW:700,$FS:15px,$LH:17.63px,$CASE:capitalize,$MB:0px,$CLR:$--bg-home-clr);
+    cursor:pointer;
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+}
+.header__link {
+    width: 173px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #BA4270;
+    color:$--white-clr;
+    transition: all 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+}
+.header__hamburger--btn{
+    display: none;
+    border:none;
+    background-color:transparent;
+}
+.header__modal{
+    width: 80%;
+    height: 100vh;
+    padding: 24px;
+    position:fixed;
+    top: 0;
+    right: -100%;
+    background-color: #1B262F;
+    z-index: 50;
+}
+.show{
+    right: 0;
+}
+.close__top--wrapp {
+    padding:24px 0;
+    border-bottom: 1px solid white;
+    text-align: right;
+}
+.close__bg--btn {
+    background-color: transparent;
+    border:none;
+}
+.close__list {
+    margin: 43px 0 32px;
+    flex-direction: column;
+    @include display($items:center,$space:flex-start,$gap:32px);
+}
+.close__link {
+    @include textStyle($FW:700,$FS:20px,$LH:23.5px,$CASE:inherit,$MB:0px,$CLR:#FBFCFE);
+    font-family: Public Sans;
+}
+.close__link--btn {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    display:block;
+    font-family: Public Sans;
+    background-color: #BA4270;
+    color: #FBFCFE;
+    @include textStyle($FW:700,$FS:15px,$LH:17.65px,$CASE:inherit,$MB:0px,$CLR:#FBFCFE);
+    text-align: center;
+    box-shadow: 10px 10px 25px -10px #36536B40;
+    border-radius: 24px;
+}
+@media (max-width:900px){
+    .site-header{
+        padding: 40px 0 48px;
+    }
+    .pay__content--logo > img{
+        width: 135px;
+        height: 38px;
+    }
+}
+@media (max-width:718px){
+    .site-header{
+        padding: 40px 0 32px;
+    }
+    .pay__content--list,.header__link{
+        display: none;
+    }
+    .header__hamburger--btn{
+        display: block;
+    }
+}
